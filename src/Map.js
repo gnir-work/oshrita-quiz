@@ -25,7 +25,7 @@ const MyMapComponent = compose(
     withScriptjs,
     withGoogleMap
 )(props => (
-    <GoogleMap className="map" defaultZoom={8} center={props.center}>
+    <GoogleMap className="map" defaultZoom={12} center={props.center}>
         {props.isMarkerShown && (
             <Marker position={props.center} icon={{
                 url: props.treasure ? Treasure : null
