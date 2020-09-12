@@ -10,10 +10,10 @@ const {TabPane} = Tabs;
 
 const QUESTIONS = [
     {
-        question: 'איפה נולדת?',
-        answer: 'ישראל',
-        location: {lat: -34.397, lng: 150.644},
-        locationName: 'אמריקה'
+        question: 'הארץ שבה יש מגדל נטוי?',
+        answer: 'איטליה',
+        location: {lat: 43.722018, lng: 10.395695},
+        locationName: 'פיזה-איטליה'
 
     }, {
         question: 'מה השם שלך?',
@@ -77,7 +77,8 @@ function App() {
                                     <TabPane tab={getQuestionTitle(index)} key={index}>
                                         <Card style={{width: "40vw", margin: 'auto'}}>
                                             <h3> {question} </h3>
-                                            <Input onPressEnter={onAnswerSubmit} autoFocus placeholder="תכניס את התשובה שלך פה..." onChange={onAnswerChange}
+                                            <Input onPressEnter={onAnswerSubmit} autoFocus
+                                                   placeholder="תכניס את התשובה שלך פה..." onChange={onAnswerChange}
                                                    value={currentAnswer}/>
                                             <Button style={{marginTop: '1em'}} onClick={onAnswerSubmit}>
                                                 הגש תשובה
