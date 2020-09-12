@@ -18,14 +18,14 @@ const MyMapComponent = compose(
          */
         googleMapURL:
             "https://maps.googleapis.com/maps/api/js?key=AIzaSyDj42tuYtW8WuCz9fNMCCcTlrT1t1bL0O4&v=3.exp&libraries=geometry,drawing,places&language=he",
-        loadingElement: <div style={{height: `100%`}}/>,
-        containerElement: <div style={{height: `400px`}}/>,
-        mapElement: <div style={{height: `100%`}}/>
+        loadingElement: <div style={{height: `100%`, width: '100%'}}/>,
+        containerElement: <div style={{height: `400px`, width: '100%'}}/>,
+        mapElement: <div style={{height: `100%`, width: '100%'}}/>
     }),
     withScriptjs,
     withGoogleMap
 )(props => (
-    <GoogleMap l defaultZoom={8} center={props.center}>
+    <GoogleMap className="map" defaultZoom={8} center={props.center}>
         {props.isMarkerShown && (
             <Marker position={props.center} icon={{
                 url: props.treasure ? Treasure : null

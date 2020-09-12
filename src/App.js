@@ -69,18 +69,15 @@ function App() {
                 subTitle="בהצלחה בחיפוש הכי קשה בעולם"
             />
             <div className="App">
-
                 {currentQuestion < QUESTIONS.length ? (
-                    <>
-                        <MyMapComponent isMarkerShown center={QUESTIONS[currentQuestion].location}/>
-
-                        <Tabs activeKey={currentQuestion.toString()}>
+                    <div className="game-content">
+                        <Tabs className="questions" activeKey={currentQuestion.toString()}>
                             {
                                 QUESTIONS.map(({question}, index) => (
                                     <TabPane tab={getQuestionTitle(index)} key={index}>
                                         <Card style={{width: "40vw", margin: 'auto'}}>
                                             <h3> {question} </h3>
-                                            <Input placeholder="תכניס את התשובה שלך פה..." onChange={onAnswerChange}
+                                            <Input onPressEnter={onAnswerSubmit} autoFocus placeholder="תכניס את התשובה שלך פה..." onChange={onAnswerChange}
                                                    value={currentAnswer}/>
                                             <Button style={{marginTop: '1em'}} onClick={onAnswerSubmit}>
                                                 הגש תשובה
@@ -90,7 +87,12 @@ function App() {
                                 ))
                             }
                         </Tabs>
-                    </>
+                        <div style={{width: '40vw'}}>
+                            <MyMapComponent isMarkerShown center={QUESTIONS[currentQuestion].location}/>
+                        </div>
+
+
+                    </div>
                 ) : (
                     <>
                         <h1> מצאת את האוצר! </h1>
