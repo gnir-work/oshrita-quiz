@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/oshrita-quiz/precache-manifest.3d093294656e75e4503cdfc89470e6ef.js"
+  "/oshrita-quiz/precache-manifest.824e84bf6f425aaaa3499fa97b490d93.js"
 );
 
 self.addEventListener('message', (event) => {
