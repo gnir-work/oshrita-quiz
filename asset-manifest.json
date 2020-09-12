@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/oshrita-quiz/static/css/main.f63238dd.chunk.css",
-    "main.js": "/oshrita-quiz/static/js/main.cbeef45d.chunk.js",
-    "main.js.map": "/oshrita-quiz/static/js/main.cbeef45d.chunk.js.map",
+    "main.js": "/oshrita-quiz/static/js/main.438f6112.chunk.js",
+    "main.js.map": "/oshrita-quiz/static/js/main.438f6112.chunk.js.map",
     "runtime-main.js": "/oshrita-quiz/static/js/runtime-main.f70e924a.js",
     "runtime-main.js.map": "/oshrita-quiz/static/js/runtime-main.f70e924a.js.map",
     "static/css/2.ea06eff6.chunk.css": "/oshrita-quiz/static/css/2.ea06eff6.chunk.css",
     "static/js/2.3114df7c.chunk.js": "/oshrita-quiz/static/js/2.3114df7c.chunk.js",
     "static/js/2.3114df7c.chunk.js.map": "/oshrita-quiz/static/js/2.3114df7c.chunk.js.map",
     "index.html": "/oshrita-quiz/index.html",
-    "precache-manifest.3532717f0def5cdc49d35d1b388643a5.js": "/oshrita-quiz/precache-manifest.3532717f0def5cdc49d35d1b388643a5.js",
+    "precache-manifest.00f8ca930c65085d707a60f77a8ddc07.js": "/oshrita-quiz/precache-manifest.00f8ca930c65085d707a60f77a8ddc07.js",
     "service-worker.js": "/oshrita-quiz/service-worker.js",
     "static/css/2.ea06eff6.chunk.css.map": "/oshrita-quiz/static/css/2.ea06eff6.chunk.css.map",
     "static/css/main.f63238dd.chunk.css.map": "/oshrita-quiz/static/css/main.f63238dd.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.ea06eff6.chunk.css",
     "static/js/2.3114df7c.chunk.js",
     "static/css/main.f63238dd.chunk.css",
-    "static/js/main.cbeef45d.chunk.js"
+    "static/js/main.438f6112.chunk.js"
   ]
 }
