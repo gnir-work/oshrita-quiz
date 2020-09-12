@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/oshrita-quiz/static/css/main.93d9ae81.chunk.css",
+    "main.js": "/oshrita-quiz/static/js/main.95b2b981.chunk.js",
+    "main.js.map": "/oshrita-quiz/static/js/main.95b2b981.chunk.js.map",
+    "runtime-main.js": "/oshrita-quiz/static/js/runtime-main.f70e924a.js",
+    "runtime-main.js.map": "/oshrita-quiz/static/js/runtime-main.f70e924a.js.map",
+    "static/css/2.ea06eff6.chunk.css": "/oshrita-quiz/static/css/2.ea06eff6.chunk.css",
+    "static/js/2.3114df7c.chunk.js": "/oshrita-quiz/static/js/2.3114df7c.chunk.js",
+    "static/js/2.3114df7c.chunk.js.map": "/oshrita-quiz/static/js/2.3114df7c.chunk.js.map",
+    "index.html": "/oshrita-quiz/index.html",
+    "precache-manifest.3d093294656e75e4503cdfc89470e6ef.js": "/oshrita-quiz/precache-manifest.3d093294656e75e4503cdfc89470e6ef.js",
+    "service-worker.js": "/oshrita-quiz/service-worker.js",
+    "static/css/2.ea06eff6.chunk.css.map": "/oshrita-quiz/static/css/2.ea06eff6.chunk.css.map",
+    "static/css/main.93d9ae81.chunk.css.map": "/oshrita-quiz/static/css/main.93d9ae81.chunk.css.map",
+    "static/js/2.3114df7c.chunk.js.LICENSE.txt": "/oshrita-quiz/static/js/2.3114df7c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f70e924a.js",
+    "static/css/2.ea06eff6.chunk.css",
+    "static/js/2.3114df7c.chunk.js",
+    "static/css/main.93d9ae81.chunk.css",
+    "static/js/main.95b2b981.chunk.js"
+  ]
+}
