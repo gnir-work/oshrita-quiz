@@ -10,6 +10,12 @@ const { TabPane } = Tabs;
 
 const QUESTIONS = [
     {
+        question: "איזו ארץ קיימת רק 72 שנים?",
+        answer: "ישראל",
+        location: { lat: 31.780687, lng: 35.217958 },
+        locationName: "ישראל",
+    },
+    {
         question: "הארץ שבה יש מגדל  נטוי?",
         answer: "איטליה",
         location: { lat: 43.722018, lng: 10.395695 },
@@ -18,7 +24,7 @@ const QUESTIONS = [
     {
         question: "מהי הארץ הכי קרה בארצות הברית?",
         answer: "אלאסקה",
-        location: { lat: 65.159312, lng: 152.319132 },
+        location: { lat: 65.5826632, lng: -101.6041806 },
         locationName: "אלאסקה נהר יוקון ",
     },
     {
@@ -45,15 +51,9 @@ const QUESTIONS = [
         location: { lat: 8.96349, lng: 38.755129 },
         locationName: "אתיופיה, אדיס אבבה",
     },
-    {
-        question: "איזו ארץ קיימת רק 72 שנים?",
-        answer: "ישראל",
-        location: { lat: 31.780687, lng: 35.217958 },
-        locationName: "ישראל",
-    },
 ];
 
-const TREASURE_LOCATION = { lat: 41.7133867, lng: 55.092611517 };
+const TREASURE_LOCATION = { lat: 31.7814165, lng: 35.2085727 };
 
 const INITIAL_LOCATION = { lat: 31.7133867, lng: 35.0926115 };
 
@@ -91,13 +91,12 @@ function App() {
     };
 
     const getQuestionTitle = (index) =>
-        index < currentQuestion
+        index < currentQuestion || (index === currentQuestion && answered)
             ? `שאלה  ${index + 1} - ${QUESTIONS[index].locationName}`
             : `שאלה  ${index + 1} - ???`;
 
     const getLocation = () => {
         if (answered) {
-            console.log('hello');
             return LOCATIONS[currentQuestion + 1];
         } else {
             return LOCATIONS[currentQuestion];
