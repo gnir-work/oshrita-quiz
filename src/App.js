@@ -55,14 +55,26 @@ const QUESTIONS = [
 
 const TREASURE_LOCATION = { lat: 41.7133867, lng: 55.092611517 };
 
+const INITIAL_LOCATION = { lat: 31.7133867, lng: 35.0926115 };
+
+const LOCATIONS = [
+    INITIAL_LOCATION,
+    ...QUESTIONS.map((q) => q.location),
+    TREASURE_LOCATION,
+];
+
 function App() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [currentAnswer, setCurrentAnswer] = useState("");
+    const [answered, setAnswered] = useState(false);
 
     const onAnswerSubmit = () => {
+        if (answered) {
+            return;
+        }
         if (currentAnswer === QUESTIONS[currentQuestion].answer) {
             message.success("תשובה נכונה!", 1);
-            setTimeout(moveOnToNextQuestion, 1000);
+            setAnswered(true);
         } else {
             message.error("טעות!", 1);
         }
@@ -70,6 +82,7 @@ function App() {
 
     const moveOnToNextQuestion = () => {
         setCurrentQuestion(currentQuestion + 1);
+        setAnswered(false);
         setCurrentAnswer("");
     };
 
@@ -81,6 +94,15 @@ function App() {
         index < currentQuestion
             ? `שאלה  ${index + 1} - ${QUESTIONS[index].locationName}`
             : `שאלה  ${index + 1} - ???`;
+
+    const getLocation = () => {
+        if (answered) {
+            console.log('hello');
+            return LOCATIONS[currentQuestion + 1];
+        } else {
+            return LOCATIONS[currentQuestion];
+        }
+    };
 
     return (
         <Layout stlye={{ direction: "ltr" }}>
@@ -110,6 +132,7 @@ function App() {
                                     >
                                         <h3> {question} </h3>
                                         <Input
+                                            disabled={answered}
                                             onPressEnter={onAnswerSubmit}
                                             autoFocus
                                             placeholder="תכניס את התשובה שלך פה..."
@@ -122,6 +145,14 @@ function App() {
                                         >
                                             הגש תשובה
                                         </Button>
+                                        {answered && (
+                                            <Button
+                                                style={{ marginTop: "1em" }}
+                                                onClick={moveOnToNextQuestion}
+                                            >
+                                                למיקום הבא!
+                                            </Button>
+                                        )}
                                     </Card>
                                 </TabPane>
                             ))}
@@ -129,7 +160,7 @@ function App() {
                         <div style={{ width: "40vw" }}>
                             <MyMapComponent
                                 isMarkerShown
-                                center={QUESTIONS[currentQuestion].location}
+                                center={getLocation()}
                             />
                         </div>
                     </div>
